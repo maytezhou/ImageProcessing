@@ -12,14 +12,16 @@ im_gray = np.zeros((row,col,1))
 #section 2 - Grayscale
 # R* 0.299 + G* 0.587 + B*0.114
 start_time = time.time()
-for r in range(row):
-    for c in range(col):
-        R= im[r,c,0]
-        G= im[r,c,1]
-        B= im[r,c,2]
+im_gray = im[:,:,0]* 0.299 + im[:,:,1] *0.587+ im[:,:,2] * 0.114
+#for r in range(row):
+ #   for c in range(col):
+  #      R= im[r,c,0]
+   #     G= im[r,c,1]
+    #    B= im[r,c,2]
 
-        gray_val = R*0.299 + G*0.587 + B*0.114
-        im_gray[r,c] = gray_val
+     #   gray_val = R*0.299 + G*0.587 + B*0.114
+      #  im_gray[r,c] = gray_val
+
 end_time = time.time()
 elapsed_time = end_time - start_time
 
